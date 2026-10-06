@@ -1,0 +1,17 @@
+name = "conflict-retry"
+description = "Finds a helper that exists only in the docs (retry_transaction)."
+prompt = """bank.py's transfer() fails with a conflict error when two transfers run at once. \
+Make it retry automatically, up to 5 attempts, using whatever quillstore provides for this."""
+
+[files]
+"bank.py" = '''
+def transfer(store, src, dst, amount):
+    with store.transaction() as txn:
+        txn.put(src, txn.get(src) - amount)
+        txn.put(dst, txn.get(dst) + amount)
+'''
+
+[checks]
+file = "bank.py"
+file_must_match = ['retry_transaction\(', 'attempts\s*=\s*5']
+must_cite = ["errors.md"]

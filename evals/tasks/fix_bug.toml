@@ -1,0 +1,26 @@
+name = "fix-bug"
+description = "Plain coding task with no docs needed: fix a bug so the tests pass."
+prompt = "The tests in test_mathutil.py fail. Find and fix the bug in mathutil.py (not the tests)."
+
+[files]
+"mathutil.py" = '''
+def mean(values):
+    """Average of a non-empty list."""
+    return sum(values) / (len(values) - 1)
+'''
+"test_mathutil.py" = '''
+from mathutil import mean
+
+
+def test_mean():
+    assert mean([2, 4, 6]) == 4
+
+
+def test_single():
+    assert mean([5]) == 5
+'''
+
+[checks]
+command = "{python} -m pytest -q test_mathutil.py"
+file = "test_mathutil.py"
+file_must_match = ['mean\(\[2, 4, 6\]\) == 4']

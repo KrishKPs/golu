@@ -1,0 +1,373 @@
+{
+  "summary": {
+    "queries": 38,
+    "hit@1": 0.812,
+    "hit@3": 0.844,
+    "hit@5": 0.844,
+    "mrr": 0.823,
+    "abstain": 0.833,
+    "false_empty": 0.125
+  },
+  "rows": [
+    {
+      "query": "how do I install the library",
+      "covered": true,
+      "rank": null,
+      "returned": 0,
+      "top": []
+    },
+    {
+      "query": "make a key expire automatically after some time",
+      "covered": true,
+      "rank": 1,
+      "returned": 5,
+      "top": [
+        "quillstore/api-reference.md \u00a7 API reference > Store.put (0.47)",
+        "quillstore/api-reference.md \u00a7 API reference > Store.get (0.35)",
+        "quillstore/errors.md \u00a7 Errors > KeyTooLargeError (0.34)"
+      ]
+    },
+    {
+      "query": "only write a value if the key isn't already there",
+      "covered": true,
+      "rank": 1,
+      "returned": 1,
+      "top": [
+        "quillstore/api-reference.md \u00a7 API reference > Store.put (0.37)"
+      ]
+    },
+    {
+      "query": "fetch several keys in one call",
+      "covered": true,
+      "rank": 1,
+      "returned": 2,
+      "top": [
+        "quillstore/api-reference.md \u00a7 API reference > Store.get_many (0.45)",
+        "quillstore/api-reference.md \u00a7 API reference > Store.scan (0.35)"
+      ]
+    },
+    {
+      "query": "iterate over all keys that start with user:",
+      "covered": true,
+      "rank": 1,
+      "returned": 2,
+      "top": [
+        "quillstore/api-reference.md \u00a7 API reference > Store.scan (0.51)",
+        "quillstore/getting-started.md \u00a7 Getting started with quillstore > Reading and writing (0.33)"
+      ]
+    },
+    {
+      "query": "walk through keys in descending order",
+      "covered": true,
+      "rank": 1,
+      "returned": 1,
+      "top": [
+        "quillstore/api-reference.md \u00a7 API reference > Store.scan (0.42)"
+      ]
+    },
+    {
+      "query": "atomically update two keys together",
+      "covered": true,
+      "rank": 3,
+      "returned": 3,
+      "top": [
+        "quillstore/api-reference.md \u00a7 API reference > Store.put (0.34)",
+        "quillstore/errors.md \u00a7 Errors > ConflictError (0.34)",
+        "quillstore/api-reference.md \u00a7 API reference > Store.transaction (0.32)"
+      ]
+    },
+    {
+      "query": "get notified whenever a key changes",
+      "covered": true,
+      "rank": 1,
+      "returned": 2,
+      "top": [
+        "quillstore/api-reference.md \u00a7 API reference > Store.watch (0.35)",
+        "quillstore/api-reference.md \u00a7 API reference > Store.put (0.33)"
+      ]
+    },
+    {
+      "query": "the file keeps growing after I delete keys, how do I reclaim disk space",
+      "covered": true,
+      "rank": 1,
+      "returned": 2,
+      "top": [
+        "quillstore/api-reference.md \u00a7 API reference > Store.compact (0.43)",
+        "quillstore/errors.md \u00a7 Errors > KeyTooLargeError (0.33)"
+      ]
+    },
+    {
+      "query": "how many cache hits and misses has the store had",
+      "covered": true,
+      "rank": 1,
+      "returned": 5,
+      "top": [
+        "quillstore/api-reference.md \u00a7 API reference > Store.stats (0.53)",
+        "quillstore/api-reference.md \u00a7 API reference > quillstore.open (0.47)",
+        "quillstore/errors.md \u00a7 Errors > StoreLockedError (0.39)"
+      ]
+    },
+    {
+      "query": "make every single write durable with fsync",
+      "covered": true,
+      "rank": 1,
+      "returned": 1,
+      "top": [
+        "quillstore/api-reference.md \u00a7 API reference > quillstore.open (0.36)"
+      ]
+    },
+    {
+      "query": "open the database so that nothing can be written",
+      "covered": true,
+      "rank": null,
+      "returned": 0,
+      "top": []
+    },
+    {
+      "query": "set the default cache size from an environment variable",
+      "covered": true,
+      "rank": 1,
+      "returned": 1,
+      "top": [
+        "quillstore/configuration.md \u00a7 Configuration > Environment variables (0.40)"
+      ]
+    },
+    {
+      "query": "store arbitrary python objects like class instances",
+      "covered": true,
+      "rank": null,
+      "returned": 5,
+      "top": [
+        "quillstore/getting-started.md \u00a7 Getting started with quillstore > Reading and writing (0.40)",
+        "quillstore/getting-started.md \u00a7 Getting started with quillstore (0.39)",
+        "quillstore/api-reference.md \u00a7 API reference > Store.get_many (0.34)"
+      ]
+    },
+    {
+      "query": "use zstd instead of lz4",
+      "covered": true,
+      "rank": 1,
+      "returned": 1,
+      "top": [
+        "quillstore/configuration.md \u00a7 Configuration > Compression (0.43)"
+      ]
+    },
+    {
+      "query": "where do warnings about slow operations get logged",
+      "covered": true,
+      "rank": 1,
+      "returned": 1,
+      "top": [
+        "quillstore/configuration.md \u00a7 Configuration > Logging (0.56)"
+      ]
+    },
+    {
+      "query": "error when my key is too long",
+      "covered": true,
+      "rank": 1,
+      "returned": 2,
+      "top": [
+        "quillstore/errors.md \u00a7 Errors > KeyTooLargeError (0.57)",
+        "quillstore/api-reference.md \u00a7 API reference > Store.compact (0.31)"
+      ]
+    },
+    {
+      "query": "my transaction failed because someone else modified the data, how do I retry",
+      "covered": true,
+      "rank": 1,
+      "returned": 2,
+      "top": [
+        "quillstore/errors.md \u00a7 Errors > ConflictError (0.45)",
+        "quillstore/errors.md \u00a7 Errors > CorruptionError (0.31)"
+      ]
+    },
+    {
+      "query": "another process has the database open and I get a lock error",
+      "covered": true,
+      "rank": 1,
+      "returned": 2,
+      "top": [
+        "quillstore/errors.md \u00a7 Errors > StoreLockedError (0.50)",
+        "quillstore/errors.md \u00a7 Errors > StoreClosedError (0.34)"
+      ]
+    },
+    {
+      "query": "the database file is corrupted after a crash",
+      "covered": true,
+      "rank": 1,
+      "returned": 3,
+      "top": [
+        "quillstore/errors.md \u00a7 Errors > CorruptionError (0.52)",
+        "quillstore/cli.md \u00a7 Command-line tool > quillstore repair (0.42)",
+        "quillstore/errors.md \u00a7 Errors (0.31)"
+      ]
+    },
+    {
+      "query": "error saying the codec doesn't match",
+      "covered": true,
+      "rank": 1,
+      "returned": 2,
+      "top": [
+        "quillstore/errors.md \u00a7 Errors > CodecMismatchError (0.50)",
+        "quillstore/configuration.md \u00a7 Configuration > Codecs (0.35)"
+      ]
+    },
+    {
+      "query": "what replaced QuillDB in version 3",
+      "covered": true,
+      "rank": 1,
+      "returned": 5,
+      "top": [
+        "quillstore/migration-v2-to-v3.md \u00a7 Migrating from quillstore 2.x to 3.x > Renamed APIs (0.65)",
+        "quillstore/migration-v2-to-v3.md \u00a7 Migrating from quillstore 2.x to 3.x > Transaction isolation changed (0.61)",
+        "quillstore/cli.md \u00a7 Command-line tool > quillstore migrate (0.60)"
+      ]
+    },
+    {
+      "query": "the expire argument stopped working after upgrading",
+      "covered": true,
+      "rank": null,
+      "returned": 0,
+      "top": []
+    },
+    {
+      "query": "are transactions still serializable in v3",
+      "covered": true,
+      "rank": 1,
+      "returned": 1,
+      "top": [
+        "quillstore/migration-v2-to-v3.md \u00a7 Migrating from quillstore 2.x to 3.x > Transaction isolation changed (0.47)"
+      ]
+    },
+    {
+      "query": "convert my old 2.x data files to the new format",
+      "covered": true,
+      "rank": 1,
+      "returned": 2,
+      "top": [
+        "quillstore/migration-v2-to-v3.md \u00a7 Migrating from quillstore 2.x to 3.x > Upgrading data files (0.52)",
+        "quillstore/cli.md \u00a7 Command-line tool > quillstore migrate (0.50)"
+      ]
+    },
+    {
+      "query": "export all the data to a jsonl file",
+      "covered": true,
+      "rank": 1,
+      "returned": 2,
+      "top": [
+        "quillstore/cli.md \u00a7 Command-line tool > quillstore dump (0.51)",
+        "quillstore/cli.md \u00a7 Command-line tool > quillstore load (0.42)"
+      ]
+    },
+    {
+      "query": "import a dump back without overwriting keys that already exist",
+      "covered": true,
+      "rank": 1,
+      "returned": 5,
+      "top": [
+        "quillstore/cli.md \u00a7 Command-line tool > quillstore load (0.45)",
+        "quillstore/migration-v2-to-v3.md \u00a7 Migrating from quillstore 2.x to 3.x > Upgrading data files (0.38)",
+        "quillstore/api-reference.md \u00a7 API reference > Store.put (0.35)"
+      ]
+    },
+    {
+      "query": "show the key count and codec of a store from the terminal",
+      "covered": true,
+      "rank": 1,
+      "returned": 5,
+      "top": [
+        "quillstore/cli.md \u00a7 Command-line tool > quillstore inspect (0.58)",
+        "quillstore/cli.md \u00a7 Command-line tool > quillstore stats (0.47)",
+        "quillstore/api-reference.md \u00a7 API reference > Store.stats (0.47)"
+      ]
+    },
+    {
+      "query": "use the store in a with statement so it closes itself",
+      "covered": true,
+      "rank": 1,
+      "returned": 5,
+      "top": [
+        "quillstore/getting-started.md \u00a7 Getting started with quillstore > Closing the store (0.49)",
+        "quillstore/errors.md \u00a7 Errors > StoreClosedError (0.48)",
+        "quillstore/errors.md \u00a7 Errors > StoreLockedError (0.37)"
+      ]
+    },
+    {
+      "query": "what kinds of values can I store",
+      "covered": true,
+      "rank": null,
+      "returned": 0,
+      "top": []
+    },
+    {
+      "query": "raise an error instead of creating the file when it's missing",
+      "covered": true,
+      "rank": 1,
+      "returned": 4,
+      "top": [
+        "quillstore/errors.md \u00a7 Errors > StoreNotFoundError (0.39)",
+        "quillstore/getting-started.md \u00a7 Getting started with quillstore > Opening a store (0.38)",
+        "quillstore/errors.md \u00a7 Errors (0.38)"
+      ]
+    },
+    {
+      "query": "return a fallback value when a key does not exist",
+      "covered": true,
+      "rank": 1,
+      "returned": 1,
+      "top": [
+        "quillstore/api-reference.md \u00a7 API reference > Store.get (0.34)"
+      ]
+    },
+    {
+      "query": "how do I set up replication to a second server",
+      "covered": false,
+      "rank": null,
+      "returned": 0,
+      "top": []
+    },
+    {
+      "query": "connect to the store over an HTTP REST API",
+      "covered": false,
+      "rank": null,
+      "returned": 1,
+      "top": [
+        "quillstore/migration-v2-to-v3.md \u00a7 Migrating from quillstore 2.x to 3.x > Renamed APIs (0.30)"
+      ]
+    },
+    {
+      "query": "how to bake sourdough bread",
+      "covered": false,
+      "rank": null,
+      "returned": 0,
+      "top": []
+    },
+    {
+      "query": "configure OAuth login for the admin dashboard",
+      "covered": false,
+      "rank": null,
+      "returned": 0,
+      "top": []
+    },
+    {
+      "query": "SQL syntax for joining two tables",
+      "covered": false,
+      "rank": null,
+      "returned": 0,
+      "top": []
+    },
+    {
+      "query": "what's the weather in Paris tomorrow",
+      "covered": false,
+      "rank": null,
+      "returned": 0,
+      "top": []
+    }
+  ],
+  "config": {
+    "embedder": "all-MiniLM-L6-v2",
+    "min_score": 0.3,
+    "k": 5,
+    "chunks": 38
+  }
+}

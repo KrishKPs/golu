@@ -1,0 +1,7 @@
+name = "abstain-replication"
+description = "The docs don't cover replication: Golu must say so, not invent an API."
+prompt = "How do I set up quillstore replication to a second machine? Just answer, don't write code."
+
+[checks]
+answer_must_match = ["(?i)(not (covered|documented|mentioned|described)|(do|does|did|is|are)(n['’]t| not) (cover|mention|document|describe|include|covered|documented|mentioned)|no (information|documentation|mention)|(couldn['’]t|could not|can['’]t|cannot) find)"]
+answer_must_not_match = ['(?i)replicat\w*\s*\(', '(?i)replica_of\s*=', '(?i)--replica']

@@ -1,0 +1,8 @@
+# MCP servers Golu starts when launched in this directory.
+# See golu/mcp/config.py for all options.
+
+[[mcp_servers]]
+name = "docs"
+command = ".venv/bin/python"          # relative to cwd (this repo)
+args = ["-m", "rag_server"]
+trust = "read_only"                   # search_docs/get_doc are read-only: no prompts

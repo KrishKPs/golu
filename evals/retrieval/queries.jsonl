@@ -1,0 +1,38 @@
+{"query": "how do I install the library", "expected": [["getting-started.md", "Installation"]]}
+{"query": "make a key expire automatically after some time", "expected": [["api-reference.md", "Store.put"]]}
+{"query": "only write a value if the key isn't already there", "expected": [["api-reference.md", "Store.put"]]}
+{"query": "fetch several keys in one call", "expected": [["api-reference.md", "Store.get_many"]]}
+{"query": "iterate over all keys that start with user:", "expected": [["api-reference.md", "Store.scan"]]}
+{"query": "walk through keys in descending order", "expected": [["api-reference.md", "Store.scan"]]}
+{"query": "atomically update two keys together", "expected": [["api-reference.md", "Store.transaction"]]}
+{"query": "get notified whenever a key changes", "expected": [["api-reference.md", "Store.watch"]]}
+{"query": "the file keeps growing after I delete keys, how do I reclaim disk space", "expected": [["api-reference.md", "Store.compact"]]}
+{"query": "how many cache hits and misses has the store had", "expected": [["api-reference.md", "Store.stats"]]}
+{"query": "make every single write durable with fsync", "expected": [["api-reference.md", "quillstore.open"]]}
+{"query": "open the database so that nothing can be written", "expected": [["api-reference.md", "quillstore.open"], ["errors.md", "ReadOnlyError"]]}
+{"query": "set the default cache size from an environment variable", "expected": [["configuration.md", "Environment variables"]]}
+{"query": "store arbitrary python objects like class instances", "expected": [["configuration.md", "Codecs"]]}
+{"query": "use zstd instead of lz4", "expected": [["configuration.md", "Compression"]]}
+{"query": "where do warnings about slow operations get logged", "expected": [["configuration.md", "Logging"]]}
+{"query": "error when my key is too long", "expected": [["errors.md", "KeyTooLargeError"], ["api-reference.md", "Store.put"]]}
+{"query": "my transaction failed because someone else modified the data, how do I retry", "expected": [["errors.md", "ConflictError"]]}
+{"query": "another process has the database open and I get a lock error", "expected": [["errors.md", "StoreLockedError"]]}
+{"query": "the database file is corrupted after a crash", "expected": [["errors.md", "CorruptionError"], ["cli.md", "quillstore repair"]]}
+{"query": "error saying the codec doesn't match", "expected": [["errors.md", "CodecMismatchError"]]}
+{"query": "what replaced QuillDB in version 3", "expected": [["migration-v2-to-v3.md", "Renamed APIs"]]}
+{"query": "the expire argument stopped working after upgrading", "expected": [["migration-v2-to-v3.md", "Renamed APIs"]]}
+{"query": "are transactions still serializable in v3", "expected": [["migration-v2-to-v3.md", "Transaction isolation changed"]]}
+{"query": "convert my old 2.x data files to the new format", "expected": [["migration-v2-to-v3.md", "Upgrading data files"], ["cli.md", "quillstore migrate"]]}
+{"query": "export all the data to a jsonl file", "expected": [["cli.md", "quillstore dump"]]}
+{"query": "import a dump back without overwriting keys that already exist", "expected": [["cli.md", "quillstore load"]]}
+{"query": "show the key count and codec of a store from the terminal", "expected": [["cli.md", "quillstore inspect"]]}
+{"query": "use the store in a with statement so it closes itself", "expected": [["getting-started.md", "Closing the store"]]}
+{"query": "what kinds of values can I store", "expected": [["getting-started.md", "Reading and writing"]]}
+{"query": "raise an error instead of creating the file when it's missing", "expected": [["getting-started.md", "Opening a store"], ["errors.md", "StoreNotFoundError"]]}
+{"query": "return a fallback value when a key does not exist", "expected": [["api-reference.md", "Store.get"], ["getting-started.md", "Reading and writing"]]}
+{"query": "how do I set up replication to a second server", "expected": []}
+{"query": "connect to the store over an HTTP REST API", "expected": []}
+{"query": "how to bake sourdough bread", "expected": []}
+{"query": "configure OAuth login for the admin dashboard", "expected": []}
+{"query": "SQL syntax for joining two tables", "expected": []}
+{"query": "what's the weather in Paris tomorrow", "expected": []}

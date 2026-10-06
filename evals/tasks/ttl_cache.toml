@@ -1,0 +1,11 @@
+name = "ttl-cache"
+description = "Uses an unfamiliar API correctly: must look up how expiry works."
+prompt = """Create cache.py with a function cache_user(store, user_id, data) that saves `data` \
+under the key f"user:{user_id}" using quillstore, so the entry expires after 5 minutes. \
+The store is already open; don't open one."""
+
+[checks]
+file = "cache.py"
+file_must_match = ['ttl_seconds\s*=\s*(300|5\s*\*\s*60)', '\.put\(']
+file_must_not_match = ['expire\s*=', '\.set\(']
+must_cite = ["api-reference.md"]

@@ -1,0 +1,30 @@
+name = "migrate-v2"
+description = "Upgrades code from a renamed API; model memory can't know the new names."
+prompt = "legacy.py uses quillstore 2.x. Update it to the quillstore 3.x API without changing behaviour."
+
+[files]
+"legacy.py" = '''
+from quillstore import QuillDB
+
+db = QuillDB("sessions.qs")
+
+
+def remember(session_id, data):
+    db.set(f"session:{session_id}", data, expire=3600)
+
+
+def all_sessions():
+    return list(db.iter_prefix("session:"))
+
+
+def rename(old, new):
+    with db.atomic() as txn:
+        txn.put(new, txn.get(old))
+        txn.delete(old)
+'''
+
+[checks]
+file = "legacy.py"
+file_must_match = ['quillstore\.open\(', 'ttl_seconds\s*=\s*3600', 'scan\(\s*prefix\s*=', '\.transaction\(']
+file_must_not_match = ['QuillDB', 'expire\s*=', 'iter_prefix', '\.atomic\(']
+must_cite = ["migration-v2-to-v3.md"]
